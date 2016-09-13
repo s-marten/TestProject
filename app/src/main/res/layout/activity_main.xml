@@ -9,19 +9,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ru.marten.testproject.MainActivity">
 
+    <ScrollView
+        android:id="@+id/btns_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:id="@+id/buttons_panel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/start_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="start"
+            android:text="async test"
             />
+
+        <Button
+            android:id="@+id/btn_loader_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="loader test"/>
     </LinearLayout>
+
+    </ScrollView>
 
     <TextView
         android:id="@+id/status_text"
@@ -32,6 +46,8 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:text="Hello World!"
-        android:layout_below="@id/buttons_panel"
-        android:layout_centerHorizontal="true"/>
+        android:layout_below="@id/btns_scroll"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
 </RelativeLayout>

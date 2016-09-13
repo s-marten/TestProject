@@ -2,11 +2,11 @@ package ru.marten.testproject.netutils;
 
 import android.os.AsyncTask;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
  * Created by marten on 19.08.16.
+ * Пример передачи метода в качестве параметра
  */
 public class CustomAsyncTask extends AsyncTask<Object, Object, Object> {
 

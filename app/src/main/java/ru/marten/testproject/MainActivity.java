@@ -1,5 +1,6 @@
 package ru.marten.testproject;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         status_text = (TextView) findViewById(R.id.status_text);
+
+        //start async task
         Button testBtn = (Button) findViewById(R.id.start_button);
         testBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,8 +27,20 @@ public class MainActivity extends AppCompatActivity {
                 asyncTest();
             }
         });
+
+
+        Button btn_loader_test = (Button) findViewById(R.id.btn_loader_test);
+        btn_loader_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, LoaderActivity.class));
+            }
+        });
+
     }
 
+
+    ////// async pattern ///////////////////////////
     public void setText() {
         status_text.setText("Got it");
     }
@@ -39,4 +54,7 @@ public class MainActivity extends AppCompatActivity {
         }
         task.execute();
     }
+    /////////////////////////////////////////////////
+
+
 }
