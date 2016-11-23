@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import ru.marten.testproject.exprecyclerview.ExpRecyclerActitvity;
 import ru.marten.testproject.netutils.CustomAsyncTask;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, LoaderActivity.class));
+            }
+        });
+
+        Button btn_recycler_test = (Button) findViewById(R.id.btn_recycler_test);
+        btn_recycler_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ExpRecyclerActitvity.class));
             }
         });
 

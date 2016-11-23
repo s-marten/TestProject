@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoaderActivity"></activity>
+        <activity android:name=".LoaderActivity" />
+        <activity android:name=".exprecyclerview.ExpRecyclerActitvity"></activity>
     </application>
 
 </manifest>
